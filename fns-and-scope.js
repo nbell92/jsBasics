@@ -6,7 +6,7 @@ var name = 'Tyler';
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
   //Code Here
-  function isTyler (name){
+  function isTyler(name){
     if(name === "Tyler"){
       return ("true");
     }else {
@@ -15,7 +15,7 @@ var name = 'Tyler';
   }
 //Next problem
 
-alert((isTyler("Tyler"));
+isTyler("Tyler");
 
 //Create a function called getName that uses prompt() to prompt the user for their name, then returns the name.
 
@@ -28,7 +28,7 @@ alert((isTyler("Tyler"));
 
 //Next Problem
 
-  console.log(getName());
+  getName();
 
 //Create a function called welcome that uses your getName function you created in the previous problem to get the users name,
 //then alerts "Welcome, " plus whatever the users name is.
@@ -71,28 +71,33 @@ All the above variables are falsy. Everything else is true.
 
   //Code Here
 function myName(){
-
+  return prompt('Please enter your name:');
 }
-
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
+var myNewName = myName();
 
 //Now alert the result of invoking newMyName
 
-
-
 //Next problem
 
+alert(myNewName);
 
 
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
-
+function outerFn (){
+  function (){
+    return(myNewName);
+  }
+  return function ();
+}
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-
+var innerFn = outerFn ();
 //Now invoke innerFn.
+innerFn();
