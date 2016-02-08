@@ -8,9 +8,9 @@ var name = 'Tyler';
   //Code Here
   function isTyler(name){
     if(name === "Tyler"){
-      return ("true");
+      return 'true';
     }else {
-      return ("false");
+      return 'false';
     }
   }
 //Next problem
@@ -22,7 +22,7 @@ isTyler("Tyler");
   //Code Here
   function getName (name){
     name = prompt("What is your name?");
-    }
+
     return name;
   }
 
@@ -40,31 +40,31 @@ function welcome (){
 
 //Next problem
 
-alert welcome();
+alert(welcome());
 
 //What is the difference between arguments and parameters?
 
   //Answer Here
-An argument in context with functions is the actual value that is passed to the function ( as input) ,when it is called.
+// An argument in context with functions is the actual value that is passed to the function ( as input) ,when it is called.
 
 //Next problem
 
-Parameter refers to the variables that are used in the function declaration/definition to represent those arguments that were send to the function during the function call.
+// Parameter refers to the variables that are used in the function declaration/definition to represent those arguments that were send to the function during the function call.
 
 //What are all the falsy values in JavaScript and how do you check if something is falsy?
 
   //Answer Here
-
-  false
-  0 //(zero)
-  "" //(empty string)
-  null
-  undefined
-  NaN //(Not-a-Number)
+  //
+  // false
+  // 0 //(zero)
+  // "" //(empty string)
+  // null
+  // undefined
+  // NaN //(Not-a-Number)
 
 //Next Problem
 
-All the above variables are falsy. Everything else is true.
+// All the above variables are falsy. Everything else is true.
 
 
 //Create a function called myName that returns your name
@@ -89,15 +89,14 @@ alert(myNewName);
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
-function outerFn (){
-  function (){
-    return(myNewName);
+function outerFn(){
+  return function(){
+    return("Nichole");
   }
-  return function ();
 }
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-var innerFn = outerFn ();
+var innerFn = outerFn();
 //Now invoke innerFn.
 innerFn();
