@@ -144,6 +144,7 @@ function fnCounter(someFunction,N){
 //Next Problem
 
   // Make the following code work
+  
   var funcArray = (function(x) {
     var arr = [x];
     return (function() {
