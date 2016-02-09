@@ -130,24 +130,29 @@ function fnCounter(someFunction,N){
 */
 
     //Code Here
-    var counter = (function(){
-      var i = 0;{
-        var  setTimeout = function timer(){
-          for (var i=1; i<=5; i++){
-            console.log( i );
-        } } i*1000 );
+  var counter = function(){
+      var num = 0;
+      return function() {for (var i=1; i<=5; i++) {
+         setTimeout( function timer(){
+             console.log( num += 1 );
+        }, i*1000 );
+       }
+     }
     }
-  })();
-
+    var time = counter();
+    time();
 //Next Problem
 
   // Make the following code work
-  var funcArray = (function () {
-      var array = [0];
-      return function () {
-        for(var i=0 i<=array.length; i++)
-          return array;}
+  var funcArray = (function(x) {
+    var arr = [x];
+    return (function() {
+      for (var i = 0; i <= arr.length; i++) {
+        return arr.push(i);
+      }
+    })()
   })
+  //funcArray(5);
 
   // Make the following code work
   funcArray[0]() //0
